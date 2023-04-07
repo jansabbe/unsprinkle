@@ -1,13 +1,14 @@
 import React from 'react';
 import styled from 'styled-components/macro';
+import {OptimizedImage} from "../OptimizedImage";
 
 const Hero = () => {
-  return (
-    <Wrapper>
-      <HeroImage src="/images/hero-img.jpg" />
-      <Swoop src="/swoop.svg" />
-    </Wrapper>
-  );
+    return (
+        <Wrapper>
+            <HeroImage src="/images/hero-img.jpg" alt="Cat staring into your soul"/>
+            <Swoop src="/swoop.svg" alt="" />
+        </Wrapper>
+    );
 };
 
 const Wrapper = styled.section`
@@ -20,7 +21,7 @@ const Wrapper = styled.section`
   background: hsl(0deg 0% 1%);
 `;
 
-const HeroImage = styled.img`
+const HeroImage = styled(OptimizedImage)`
   display: block;
   width: 500px;
   height: 500px;
