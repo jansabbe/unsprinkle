@@ -33,19 +33,23 @@ const Image = styled(OptimizedImage)`
 `;
 
 const Tags = styled.ul`
-  display: flex;
-  gap: 8px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 `;
 
 const Tag = styled.li`
+  display: inline;
   padding: 4px 8px;
+  line-height: 2;
   background: var(--color-gray-300);
   font-size: 0.875rem;
   font-weight: 475;
   color: var(--color-gray-800);
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
+  
+  &:not(:last-of-type) {
+    margin-right: 8px;
+  }
 `;
 
 export default PhotoGridItem;
